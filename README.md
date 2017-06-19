@@ -40,10 +40,11 @@ Usage of the centering helper methods should be restricted to `layoutSubviews:`,
 The methods can also be invoked inside animation blocks.  
 
 ```Swift
-UIView.animate(withDuration: duration, delay: delay, options: [], animations: {
+UIView.animate(withDuration: duration, delay: delay, options: [], animations: { [weak self] in
 
-  self.foo.centerHorizontally(between: self.bar, and: self.baz)
-  self.foo.centerVertically(between: self.bar, and: self.baz)
+  guard let weakSelf = self else { return }
+  weakSelf.foo.centerHorizontally(between: weakSelf.bar, and: weakSelf.baz)
+  weakSelf.foo.centerVertically(between: weakSelf.bar, and: weakSelf.baz)
 })
 ```
 
