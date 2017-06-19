@@ -54,6 +54,8 @@ public extension CGFloat {
     
     var nineTenths: CGFloat { return self * 0.90 }
     
+    var double: CGFloat { return self * 2.0 }
+    
 }
 
 // MARK: - UIView
