@@ -58,6 +58,48 @@ public extension CGFloat {
     
 }
 
+public enum Percentage: CGFloat {
+    
+    case oneTenth = 0.10
+    
+    case twoTenths = 0.20
+    
+    case quarter = 0.25
+    
+    case threeTenths = 0.30
+    
+    case fourTenths = 0.40
+    
+    case half = 0.5
+    
+    case sixTenths = 0.60
+    
+    case sevenTenths = 0.70
+    
+    case threeQuarters = 0.75
+    
+    case eightTenths = 0.80
+    
+    case nineTenths = 0.90
+    
+    case full = 1.0
+    
+    case oneAndAQuarter = 1.25
+    
+    case oneAndAHalf = 1.50
+    
+    case oneAndThreeQuarters = 1.75
+    
+    case double = 2.0
+    
+    case triple = 3.0
+    
+    case quadruple = 4.0
+    
+    case quintuple = 5.0
+    
+}
+
 // MARK: - UIView
 
 public extension UIView {
