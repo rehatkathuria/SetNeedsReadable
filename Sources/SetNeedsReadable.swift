@@ -442,10 +442,22 @@ public extension UIView {
          Sizes the height of the caller to match the height of the
          view passed in the first argument.
      
+         - Parameter view: The view to match the caller's height to.
+     **/
+    final func sizeHeightTo(heightOf view: UIView) {
+        
+        sizeHeightTo(.full, heightOf: view)
+    }
+    
+    
+    /**
+         Sizes the height of the caller to match the height of the
+         view passed in the first argument.
+     
          - Parameter ratio: The ratio of the height to match.
          - Parameter view: The view to match the caller's height to.
      **/
-    final func sizeHeightTo(_ ratio: Ratio = .full, heightOf view: UIView) {
+    final func sizeHeightTo(_ ratio: Ratio, heightOf view: UIView) {
         
         frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: bounds.width, height: view.bounds.height * ratio.rawValue)
     }
@@ -469,10 +481,22 @@ public extension UIView {
          Sizes the height of the caller to match the width of the
          view passed in the first argument.
      
+         - Parameter view: The view to match the caller's height to.
+     **/
+    final func sizeHeightTo(widthOf view: UIView) {
+        
+        sizeHeightTo(.full, widthOf: view)
+    }
+    
+    
+    /**
+         Sizes the height of the caller to match the width of the
+         view passed in the first argument.
+     
          - Parameter ratio: The ratio of the height to match.
          - Parameter view: The view to match the caller's height to.
      **/
-    final func sizeHeightTo(_ ratio: Ratio = .full, widthOf view: UIView) {
+    final func sizeHeightTo(_ ratio: Ratio, widthOf view: UIView) {
         
         frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: bounds.width, height: view.bounds.width * ratio.rawValue)
     }
@@ -506,10 +530,22 @@ public extension UIView {
          Sizes the width of the caller to match the width of the
          view passed in the first argument.
      
+         - Parameter view: The view to match the caller's width to.
+     **/
+    final func sizeWidthTo(widthOf view: UIView) {
+        
+        sizeWidthTo(.full, widthOf: view)
+    }
+    
+    
+    /**
+         Sizes the width of the caller to match the width of the
+         view passed in the first argument.
+     
          - Parameter ratio: The ratio of the width to match.
          - Parameter view: The view to match the caller's width to.
      **/
-    final func sizeWidthTo(_ ratio: Ratio = .full, widthOf view: UIView) {
+    final func sizeWidthTo(_ ratio: Ratio, widthOf view: UIView) {
         
         frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: view.bounds.width * ratio.rawValue, height: bounds.height)
     }
@@ -532,10 +568,22 @@ public extension UIView {
          Sizes the width of the caller to match the height of the
          view passed in the first argument.
      
+         - Parameter view: The view to match the caller's width to.
+     **/
+    final func sizeWidthTo(heightOf view: UIView) {
+        
+        sizeWidthTo(.full, heightOf: view)
+    }
+    
+    
+    /**
+         Sizes the width of the caller to match the height of the
+         view passed in the first argument.
+     
          - Parameter ratio: The ratio of the width to match.
          - Parameter view: The view to match the caller's width to.
      **/
-    final func sizeWidthTo(_ ratio: Ratio = .full, heightOf view: UIView) {
+    final func sizeWidthTo(_ ratio: Ratio, heightOf view: UIView) {
         
         frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: view.bounds.height * ratio.rawValue, height: bounds.height)
     }
