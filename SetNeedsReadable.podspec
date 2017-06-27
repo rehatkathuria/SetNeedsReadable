@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SetNeedsReadable'
-  s.version          = '2.1'
+  s.version          = '2.2'
   s.summary          = 'Helpful extensions for CGFloat and UIView aimed to enhance readability of layout code.'
   s.homepage         = 'https://github.com/rehatkathuria/SetNeedsReadable'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
