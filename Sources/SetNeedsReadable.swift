@@ -58,7 +58,7 @@ public extension CGFloat {
     
 }
 
-public enum Percentage: CGFloat {
+public enum Ratio: CGFloat {
     
     case oneTenth = 0.10
     
@@ -430,11 +430,11 @@ public extension UIView {
          view passed in the first argument.
      
          - Parameter view: The view to match the caller's height to.
-         - Parameter percentage: The percentage of the height to match.
+         - Parameter ratio: The ratio of the height to match.
      **/
-    final func sizeHeightTo(heightOf view: UIView, percentage: CGFloat = 1.0) {
+    final func sizeHeightTo(heightOf view: UIView, ratio: CGFloat = 1.0) {
         
-        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: bounds.width, height: view.bounds.height * percentage)
+        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: bounds.width, height: view.bounds.height * ratio)
     }
     
     
@@ -442,12 +442,12 @@ public extension UIView {
          Sizes the height of the caller to match the height of the
          view passed in the first argument.
      
+         - Parameter ratio: The ratio of the height to match.
          - Parameter view: The view to match the caller's height to.
-         - Parameter percentage: The percentage of the height to match.
      **/
-    final func sizeHeightTo(heightOf view: UIView, percentage: Percentage = .full) {
+    final func sizeHeightTo(_ ratio: Ratio = .full, heightOf view: UIView) {
         
-        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: bounds.width, height: view.bounds.height * percentage.rawValue)
+        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: bounds.width, height: view.bounds.height * ratio.rawValue)
     }
     
     
@@ -457,11 +457,11 @@ public extension UIView {
          view passed in the first argument.
      
          - Parameter view: The view to match the caller's height to.
-         - Parameter percentage: The percentage of the height to match.
+         - Parameter ratio: The ratio of the height to match.
      **/
-    final func sizeHeightTo(widthOf view: UIView, percentage: CGFloat = 1.0) {
+    final func sizeHeightTo(widthOf view: UIView, ratio: CGFloat = 1.0) {
         
-        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: bounds.width, height: view.bounds.width * percentage)
+        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: bounds.width, height: view.bounds.width * ratio)
     }
     
     
@@ -469,12 +469,12 @@ public extension UIView {
          Sizes the height of the caller to match the width of the
          view passed in the first argument.
      
+         - Parameter ratio: The ratio of the height to match.
          - Parameter view: The view to match the caller's height to.
-         - Parameter percentage: The percentage of the height to match.
      **/
-    final func sizeHeightTo(widthOf view: UIView, percentage: Percentage = .full) {
+    final func sizeHeightTo(_ ratio: Ratio = .full, widthOf view: UIView) {
         
-        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: bounds.width, height: view.bounds.width * percentage.rawValue)
+        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: bounds.width, height: view.bounds.width * ratio.rawValue)
     }
     
     
@@ -494,11 +494,11 @@ public extension UIView {
          view passed in the first argument.
      
          - Parameter view: The view to match the caller's width to.
-         - Parameter percentage: The percentage of the width to match.
+         - Parameter ratio: The ratio of the width to match.
      **/
-    final func sizeWidthTo(widthOf view: UIView, percentage: CGFloat = 1.0) {
+    final func sizeWidthTo(widthOf view: UIView, ratio: CGFloat = 1.0) {
         
-        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: view.bounds.width * percentage, height: bounds.height)
+        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: view.bounds.width * ratio, height: bounds.height)
     }
     
     
@@ -506,12 +506,12 @@ public extension UIView {
          Sizes the width of the caller to match the width of the
          view passed in the first argument.
      
+         - Parameter ratio: The ratio of the width to match.
          - Parameter view: The view to match the caller's width to.
-         - Parameter percentage: The percentage of the width to match.
      **/
-    final func sizeWidthTo(widthOf view: UIView, percentage: Percentage = .full) {
+    final func sizeWidthTo(_ ratio: Ratio = .full, widthOf view: UIView) {
         
-        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: view.bounds.width * percentage.rawValue, height: bounds.height)
+        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: view.bounds.width * ratio.rawValue, height: bounds.height)
     }
     
     
@@ -520,11 +520,11 @@ public extension UIView {
          view passed in the first argument.
      
          - Parameter view: The view to match the caller's width to.
-         - Parameter percentage: The percentage of the height to match.
+         - Parameter ratio: The ratio of the height to match.
      **/
-    final func sizeWidthTo(heightOf view: UIView, percentage: CGFloat = 1.0) {
+    final func sizeWidthTo(heightOf view: UIView, ratio: CGFloat = 1.0) {
         
-        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: view.bounds.height * percentage, height: bounds.height)
+        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: view.bounds.height * ratio, height: bounds.height)
     }
     
     
@@ -532,12 +532,12 @@ public extension UIView {
          Sizes the width of the caller to match the height of the
          view passed in the first argument.
      
+         - Parameter ratio: The ratio of the width to match.
          - Parameter view: The view to match the caller's width to.
-         - Parameter percentage: The percentage of the width to match.
      **/
-    final func sizeWidthTo(heightOf view: UIView, percentage: Percentage = .full) {
+    final func sizeWidthTo(_ ratio: Ratio = .full, heightOf view: UIView) {
         
-        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: view.bounds.height * percentage.rawValue, height: bounds.height)
+        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: view.bounds.height * ratio.rawValue, height: bounds.height)
     }
     
     
